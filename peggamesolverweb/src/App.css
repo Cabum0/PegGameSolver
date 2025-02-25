@@ -1,0 +1,246 @@
+#root {
+    width: 90%;
+    padding: 2rem;
+    text-align: center;
+   
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logo {
+    height: 6em;
+    padding: 1.5em;
+    will-change: filter;
+    transition: filter 300ms;
+}
+
+    .logo:hover {
+        filter: drop-shadow(0 0 2em #646cffaa);
+    }
+
+    .logo.react:hover {
+        filter: drop-shadow(0 0 2em #61dafbaa);
+    }
+
+@keyframes logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    a:nth-of-type(2) .logo {
+        animation: logo-spin infinite 20s linear;
+    }
+}
+
+.card {
+    padding: 2em;
+}
+
+.read-the-docs {
+    color: #888;
+}
+
+.mensajes_box {
+   
+    width: 100%;
+}
+
+.centrar_box {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.base_clavija_hueco {
+    text-align: center;
+    margin: 8px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    border: 2px solid black;
+}
+
+.clavija {
+    background-color: red;
+}
+
+.hueco {
+    background-color: blue;
+}
+
+.visor_clavijas {
+    position: fixed;
+    top: 180px;
+    left: 200px;
+    margin: 5px;
+    background-color: white;
+    text-align: center;
+    border-collapse: collapse;
+    padding: 5px;
+    min-width: 400px;
+    border-radius: 20px;
+}
+
+    .visor_clavijas tr td {
+        text-align: center;
+        padding: 0px;
+        border: 0px;
+    }
+
+
+.tabla_movimientos {
+    float: right;
+    margin: 5px;
+}
+
+.coordenada {
+    color: black;
+    font-style: italic;
+}
+
+.tabla_controles {
+    float: right;
+}
+
+.titulo_pagina {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    text-align: center; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+    z-index: 1000;
+}
+
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.loading-spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-left-color: #000;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.mensajes_box {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    max-height: 200px;
+    overflow-y: auto;
+    width: 90%;
+    border-radius: 10px; 
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+}
+
+.titulo-ejecucion {
+    text-align: center;
+    margin-bottom: 1em;
+    font-size: 1.5em; 
+}
+
+.tabla-mensajes {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+    .tabla-mensajes th,
+    .tabla-mensajes td {
+        border: 1px solid #ccc; 
+        padding: 10px; 
+        text-align: left;
+    }
+
+    .tabla-mensajes .cabecera {
+        font-weight: bold; 
+    }
+
+.fila-mensaje:hover {
+}
+
+.mensaje-vacio {
+    color: #888; 
+    text-align: center;
+    margin-top: 10px; 
+}
+
+.controles-container {
+    position: fixed;
+    top: 80px;
+    right: 0;
+    padding: 10px;
+    box-shadow: -3px 0 5px rgba(0, 0, 0, 0.2);
+    
+    z-index: 999;
+    border-radius: 5px;
+}
+
+.movimientos-container {
+    position: fixed;
+    right: 50px;
+    top: 170px;
+    max-height: 350px;
+    width: 350px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: -3px 0 5px rgba(0, 0, 0, 0.2);
+    
+    border-radius: 5px;
+}
+
+.no-movimientos-container {
+    position: fixed;
+    right: 50px;
+    top: 170px;
+    max-height: 350px;
+    width: 350px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: -3px 0 5px rgba(0, 0, 0, 0.2);
+    
+    border-radius: 5px;
+}
+
+.tabla_movimientos tr {
+    transition: background-color 0.3s; 
+}
+
+    .tabla_movimientos tr:hover {
+        background-color: green; 
+    }
+
+    .tabla_movimientos tr.bg-blue-200 {
+        background-color: darkorange; 
+    }
+

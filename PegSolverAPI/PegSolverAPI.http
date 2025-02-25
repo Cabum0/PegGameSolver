@@ -1,0 +1,6 @@
+@PegSolverAPI_HostAddress = http://localhost:5291
+
+GET {{PegSolverAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

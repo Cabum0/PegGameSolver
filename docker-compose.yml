@@ -1,0 +1,43 @@
+services:
+  mongodb:
+    image: mongo
+    container_name: mi-mongo
+    restart: always
+    networks:
+      - MT-local
+    volumes:
+      - mongo-data:/data/db
+
+  microservicio:
+    build:
+      context: .
+      dockerfile: PegSolverAPI/Dockerfile
+    container_name: mi-microservicio
+    restart: always
+    depends_on:
+      - mongodb
+    environment:
+      - ConnectionStrings__MongoDB=mongodb://mi-mongo:27017/PegSolver
+    ports:
+      - "5000:5000"
+    networks:
+      - MT-local
+
+  react-app:
+    build:
+      context: ./peggamesolverweb
+      dockerfile: Dockerfile 
+    container_name: mi-react-app
+    restart: always
+    depends_on:
+      - microservicio
+    ports:
+      - "3000:80" 
+    networks:
+      - MT-local
+
+networks:
+  MT-local:
+
+volumes:
+  mongo-data:

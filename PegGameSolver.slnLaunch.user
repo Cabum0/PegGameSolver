@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "PegSolverAPI\\PegSolverAPI.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "PegGameSolverWeb\\peggamesolverweb.esproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]
