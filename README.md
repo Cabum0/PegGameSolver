@@ -18,7 +18,7 @@ Core features of the solution:
 
 Solution explanation:
 
-The PegGameSolverLibrary project contains all the logic to simulate boards and perform different moves while following the game rules. The PegSolverAPI project uses this library and receives requests from clients, verifying if the optimal solution is already in the database to provide it. Otherwise, it calculates a possible solution, stores it in the database, and returns the result to the clients. The PegGameSolverWeb project provides a UI for a better user experience when interacting with the calculation engine.
+The PegGameSolverLibrary project contains all the logic to simulate boards and perform different moves while following the game rules. The PegSolverAPI project uses this library and receives requests from clients, verifying if the optimal solution (Result board with only one peg left) is already in the database to provide it. Otherwise, it calculates a possible solution, stores it in the database, and returns the result to the clients. The PegGameSolverWeb project provides a UI for a better user experience when interacting with the calculation engine.
 
 Sample of the message receive from the Endpoint:
 
