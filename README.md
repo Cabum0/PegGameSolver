@@ -44,5 +44,31 @@ Where we have the attributes as follow:
 - MovimientosOutput: List of movements in the inner matrix of the process.
 - HistoricoEstadosTablero: States of the board during executions.
 
+To use the docker compose file use the following command in a terminal:
+
+docker-compose up --build
+
+At the root folder of the solution for example:
+
+C:\code\PegGameSolver
+
+This will create 3 cotainers:
+
+![image](https://github.com/user-attachments/assets/3fd43f1f-1601-426c-b46d-5837de649725)
+
+Then you can use the web interface, go to:
+
+http://localhost:3000/
+
+Modify the ports in the Docker Compose file if needed.
+
+Also you can use swagger to test the API directly:
+
+http://localhost:5000/swagger/index.html
+
+Finally, you can calculate different scenarios using the input box in the right corner by entering the number of holes for the board. By clicking each move in the movement list, you can visualize that scenario on the left board. The message log will provide additional information about the calculation process.
+
+![image](https://github.com/user-attachments/assets/77d2acb8-1e77-4467-9560-406022503ab0)
+
 
 
